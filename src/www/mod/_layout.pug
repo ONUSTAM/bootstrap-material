@@ -1,0 +1,44 @@
+doctype
+html(lang='ja')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport', content='width=device-width,user-scalable=yes,initial-scale=1.0')
+    meta(name='robots', content='index,follow')
+    meta(name='format-detection', content='telephone=no')
+    block title
+    block meta
+    //link(rel='shortcut icon', href='/favicon.ico')
+  body
+    //- 読み込み先からの変数を取得
+    block vars
+      //- activePage: 表示しているページ
+
+    //- メニューに表示するページを登録
+    -var navs = { Top: './index.html', About: './about.html'};
+
+    nav.navbar.navbar-default
+      div.container-fulid
+        div.navbar-header
+          button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1", expanded="false")
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="./index.html") Crab Hermit _MK-2
+          
+        div.collapse.navbar-collapse#bs-example-navbar-collapse-1
+          ul.nav.navbar-nav
+            each val, key in navs 
+              if key == activePage
+                li.active: a(href=val) #{key}
+              else
+                li: a(href=val) #{key}
+
+    block body
+
+    include ./_footer
+
+    div.loaderMask(style="background-color: #fff; height: 100%; width: 100%; position: fixed; top: 0; left: 0;")
+
+    script(src="scripts/app.js")

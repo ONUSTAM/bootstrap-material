@@ -1,0 +1,148 @@
+extends mod/_layout
+block vars
+  - var activePage = "Top"
+
+block title
+  title crab hermit
+
+block meta
+  meta(name='description', content='')
+
+block body
+  div.container.text-center
+    h3 Hello
+    p thank's
+      br
+      | autecher, theo parish, moodymann, tortois,
+      br
+      | jacques greene, oneohtrix point never, arca, 
+
+  div.container
+    p
+      a.btn.btn-default default
+      a.btn.btn-info アイウエオ
+
+    p
+      a(href="javascript:void(0)").btn.btn-raised.btn-default default
+      a(href="javascript:void(0)").btn.btn-raised.btn-info Info
+      a(href="javascript:void(0)").btn.btn-raised.btn-primary primary
+      a(href="javascript:void(0)").btn.btn-raised.btn-warning warning
+      a(href="javascript:void(0)").btn.btn-raised.btn-danger danger
+
+    p
+      a(href="javascript:void(0)").btn.btn-raised.btn-default.active
+        span default
+      a(href="javascript:void(0)").btn.btn-raised.btn-info.active
+        span Info
+      a(href="javascript:void(0)").btn.btn-raised.btn-primary.active
+        span primary
+      a(href="javascript:void(0)").btn.btn-raised.btn-warning.active
+        span warning
+      a(href="javascript:void(0)").btn.btn-raised.btn-danger.active
+        span danger
+
+    div.panel.panel-default
+      div.panel-body Basic panel
+
+    div.panel.panel-default
+      div.panel-heading Panel heading
+      div.panel-body Panel content
+
+    div.panel.panel-default
+      div.panel-body Panel content
+      div.panel-footer Panel footer
+  
+
+
+    form.form-horizontal
+      fieldset
+        legend Legend
+        div.form-group
+          label(for="inputEmail").col-md-2.control-labelEmail
+
+          div.col-md-10
+            input(type="email", placeholder="Email").form-control#inputEmail
+
+        div.form-group
+          label(for="inputPassword").col-md-2.control-labelPassword
+
+          div.col-md-10
+            input(type="password", placeholder="Password").form-control#inputPassword
+
+        div.form-group 
+        //- <!-- inline style is just to demo custom css to put checkbox below input above -->
+          div.col-md-offset-2.col-md-10
+            div.checkbox
+              label
+                input(type="checkbox") Checkbox
+              
+              label
+                input(type="checkbox", disabled="Disabled")  Checkbox
+              
+        div.form-group
+          div.col-md-offset-2.col-md-10
+            div.togglebutton
+              label
+                input(type="checkbox")
+                | Toggle button
+              
+        div.form-group
+          label(for="inputFile").col-md-2.control-labelFile
+
+          div.col-md-10
+            input(type="text", readonly="", placeholder="Browse...").form-control
+            input(type="file", multiple="")#inputFile
+
+        div.form-group
+          label(for="textArea").col-md-2.control-labelTextarea
+
+          div.col-md-10
+            textarea(rows="3").form-control#textArea
+            span.help-blockA.longer.block of help text that breaks onto a new line and may extend beyond one line.
+
+        div.form-group
+          label.col-md-2.control-labelRadios
+
+          div.col-md-10
+            div.radio.radio-primary
+              label
+                input(type="radio", name="optionsRadios", value="option1", checked="")#optionsRadios1
+                | Option one is this
+              
+            div.radio radio-primary
+              label
+                input(type="radio", name="optionsRadios", value="option2")#optionsRadios2
+                | Option two can be something else
+              
+        div.form-group
+          label(for="select111").col-md-2.control-labelSelect
+
+          div.col-md-10
+            select#select111.form-control
+              option 1
+              option 2
+              option 3
+              option 4
+              option 5
+
+        div.form-group
+          label(for="select222", Multiple).col-md-2.control-labelSelect
+
+          div.col-md-10
+            select(multiple="")#select222.form-control
+              option 1
+              option 2
+              option 3
+              option 4
+              option 5
+
+        div.form-group
+          div.col-md-10.col-md-offset-2
+            button(type="button").btn.btn-default Cancel
+            button(type="submit").btn.btn-primary Submit
+            
+            
+        div.form-group.label-floating
+          label(for="focusedInput2").control-label Focus to show the help-block
+          input(type="text").form-control#focusedInput2
+          p.help-block You should really write something here

@@ -1,0 +1,29 @@
+{
+  "name": "y",
+  "description": "## plugins",
+  "main": "index.js",
+  "authors": [
+    "dev foundation"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "webpack",
+    "stylus",
+    "jade",
+    "browser-scync",
+    "bootstrap",
+    "lodash"
+  ],
+  "homepage": "https://github.com/ONUSTAM/Crab-hermit__MK-2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
